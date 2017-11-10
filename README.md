@@ -15,7 +15,11 @@ npm install protractor<br>
 npm install jasmine-reporters<br>
 npm install protractor-jasmine2-screenshot-reporter<br>
 npm install randomstring<br>
+Install and run webdriver and configure with firefox, chrome (safari and opera are optional)
 
+# How to run tests
+Source code: https://github.com/xmaska/protractor-demo
+> protractor conf.js
 
 ## Demo test scenario
 Please note that the implementation covers a third test case which validates whether the user is disabled until it's email gets verified.
