@@ -1,0 +1,221 @@
+<html><head><meta charset="utf-8"><style>body { font-family: Arial; }ul { list-style-position: inside; }li img { max-width: 100%; }span.passed { padding: 0 1em; color: green; }span.failed { padding: 0 1em; color: red; }span.pending { padding: 0 1em; color: orange; }span.stacktrace { white-space: pre; border: 1px solid rgb(0, 0, 0); font-size: 9pt; padding: 4px; background-color: rgb(204, 204, 204); }</style><link type="text/css" rel="stylesheet" href="../style.css"><script type="text/javascript">function showhide(id) {var e = document.getElementById(id);e.style.display = (e.style.display === "block") ? "none" : "block";}function buildQuickLinks() {var failedSpecs = document.querySelectorAll("li.failed");var quickLinksContainer = document.getElementById("quickLinks");if (!quickLinksContainer) return;if (failedSpecs.length > 0) { document.getElementById("quickLinksHeader").textContent = "Quicklink of Failure"}for (var i = 0; i < failedSpecs.length; ++i) {var li = document.createElement("li");var a = document.createElement("a");a.href = "#" + failedSpecs[i].id;a.textContent = failedSpecs[i].dataset.name + "  (" + failedSpecs[i].dataset.browser + ")";li.appendChild(a);quickLinksContainer.appendChild(li);}}function updatePassCount() {var totalPassed = document.querySelectorAll("li.passed").length;var totalFailed = document.querySelectorAll("li.failed").length;var totalSpecs = totalFailed + totalPassed;console.log("passed: %s, failed: %s, total: %s", totalPassed, totalFailed, totalSpecs);document.getElementById("summaryTotalSpecs").textContent = document.getElementById("summaryTotalSpecs").textContent + totalSpecs;document.getElementById("summaryTotalFailed").textContent = document.getElementById("summaryTotalFailed").textContent + totalFailed;if (totalFailed) {document.getElementById("summary").className = "failed";}}function start() {updatePassCount();buildQuickLinks();}window.onload = start;</script></head><body><h1>Report</h1><div id="summary" class="passed"><h4>Summary</h4><ul><li id="summaryTotalSpecs">Total specs tested: </li><li id="summaryTotalFailed">Total failed: </li></ul></div><ul style="list-style-type:none"><h4>1-Check that the Kaboo signup is working properly  (24 s)</h4><li id="3a1e62a0-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec0" data-name="Opens sign-up page successfully" data-browser="chrome"><span class="passed">&#10003;</span><a href="5c58786a1873ae633474bc504c3b6f01.png">Opens sign-up page successfully</a>(5 s)</li><li id="3a1e89b0-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec1" data-name="Fills all fields with valid data on step 1" data-browser="chrome"><span class="passed">&#10003;</span><a href="6a1fb6af65c38bf95ca9f0e0be881219.png">Fills all fields with valid data on step 1</a>(6 s)</li><li id="3a1e89b1-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec2" data-name="Clicks NEXT button" data-browser="chrome"><span class="passed">&#10003;</span><a href="1fa45cb32c310d07c26e816d82ce4e35.png">Clicks NEXT button</a>(0.812 s)</li><li id="3a1eb0c0-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec3" data-name="Fills all fields with valid data from step 2" data-browser="chrome"><span class="passed">&#10003;</span><a href="58d0cdee29902f2f78f4c5718979ac90.png">Fills all fields with valid data from step 2</a>(10 s)</li><li id="3a1eb0c1-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec4" data-name="Clicks on register button if enabled" data-browser="chrome"><span class="passed">&#10003;</span><a href="a4fa6e2361514038f2744f791d61065f.png">Clicks on register button if enabled</a>(1 s)</li><li id="3a1eb0c2-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec5" data-name="Displays confirmation on registration" data-browser="chrome"><span class="passed">&#10003;</span><a href="ad38db860b42862bd86688ed0e68126c.png">Displays confirmation on registration</a>(1 s)</li></ul><ul style="list-style-type:none"><h4>2-Check that the Kaboo login does not allows the user to log in as it's email was not confirmed! (7 s)</h4><li id="3a1eb0c3-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec6" data-name="Tries to log-in with credentials registered in previous test" data-browser="chrome"><span class="passed">&#10003;</span><a href="f582e31dd62a2138589f6208a14b834c.png">Tries to log-in with credentials registered in previous test</a>(6 s)</li><li id="3a1eb0c4-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec7" data-name="Should still display login section due to missing confirmation" data-browser="chrome"><span class="passed">&#10003;</span><a href="e805eb09a707219cd6f5b4da3d08fd5d.png">Should still display login section due to missing confirmation</a>(1 s)</li></ul><ul style="list-style-type:none"><h4>3-Check that the Kaboo login is working properly (using credentials: autouk / Autotest1 ) (24 s)</h4><li id="3a1eb0c5-c62c-11e7-a088-f923f33215eb" class="passed" data-spec="spec8" data-name="Tries to log-in with credentials registered in previous test" data-browser="chrome"><span class="passed">&#10003;</span><a href="ead287ed2cfa1783fdb61119f161d551.png">Tries to log-in with credentials registered in previous test</a>(6 s)</li><li id="3a1eb0c6-c62c-11e7-a088-f923f33215eb" class="failed" data-spec="spec9" data-name="Should  display login personal wallet after successful login!" data-browser="chrome"><span class="failed">&#10007;</span><a href="366de507b8e0d2abed24706ca09f9a6d.png">Should  display login personal wallet after successful login!</a>(18 s)<ul><li>Failed: Timed out waiting for asynchronous Angular tasks to finish after 11 seconds. This may be because the current page is not an Angular application. Please see the FAQ for more details: https://github.com/angular/protractor/blob/master/docs/timeouts.md#waiting-for-angular
+While waiting for element with locator - Locator: By(css selector, [id=&quot;wallet&quot;]). 
+The following tasks were pending:
+ - $timeout: function () {
+        $scope.preloadImages(allGamesCat);
+      }
+ - $timeout: function () {
+        $scope.preloadImages(allGamesCat);
+      }
+ - $timeout: function () {
+        $scope.preloadImages(allGamesCat);
+      }
+ - $timeout: function () {
+        $scope.preloadImages(allGamesCat);
+      }
+ - $timeout: function () {
+      toggleRealityCheck(0);
+    }
+ - $timeout: function () {
+        $scope.preloadImages(allGamesCat);
+      }
+ - $timeout: function () {
+        user = userHandler.currentUser();
+        if (user) {
+          $rootScope.userCountry = user.country;
+        }
+      }
+ - $timeout: function () {
+          if (inputController.$untouched &amp;&amp; inputController.$dirty) {
+            element.addClass(&#39;autofilled&#39;);
+
+            /** Due to a bug in Chrome, Angular won&#39;t detect the dirty state for
+             * autocompleted password fields. We will assume that any password field
+             * belonging to a dirty form will be autocompleted.
+             */
+          } else if (element.attr(&#39;type&#39;) === &#39;password&#39; &amp;&amp; formController.$dirty) {
+            element.parent().addClass(&#39;autofilled&#39;);
+          }
+        }
+ - $timeout: function () {
+                  removeEventListenerFn(formElement[0], &#39;submit&#39;, handleFormSubmission);
+                }
+ - $timeout: function () {
+    var element = document.querySelector(&#39;.s-panel__wrapper&#39;);
+    element.scrollTop = 0;
+  }
+ - $timeout: function () {
+      toggleRealityCheck(0);
+    }
+ - $timeout: function () {
+    session.authenticated().then(function () {
+      $body.addClass(&#39;is-authenticated&#39;);
+    });
+  }
+ - $timeout: function () {
+              children = element.children();
+              if (!scope.direction) {
+                scope.direction = getMenuDirection(element, parent);
+              }
+              if (scope.active) {
+                setActive(scope.active);
+              }
+            }
+ - $timeout: function () {
+        $scope.preloadImages(allGamesCat);
+      }
+ - $timeout: function () {
+              children = element.children();
+              if (!scope.direction) {
+                scope.direction = getMenuDirection(element, parent);
+              }
+              if (scope.active) {
+                setActive(scope.active);
+              }
+            }
+ - $http: https://test-api.paymentiq.io/paymentiq/api/user/account/100049004/4546537?sessionId=605ab985-60f5-4b7e-9864-524dbbf731d1&amp;showExpired=false
+ - $http: https://test-api.paymentiq.io/paymentiq/api/user/account/100049004/4546537?sessionId=605ab985-60f5-4b7e-9864-524dbbf731d1&amp;showExpired=false
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: https://test-api.paymentiq.io/paymentiq/api/user/payment/method/100049004/4546537?sessionId=605ab985-60f5-4b7e-9864-524dbbf731d1&amp;channelId=tablet&amp;method=Deposit
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: https://test-api.paymentiq.io/paymentiq/api/user/transaction/100049004/4546537?sessionId=605ab985-60f5-4b7e-9864-524dbbf731d1&amp;method=Withdrawal&amp;states=WAITING_APPROVAL
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg
+ - $http: /img/icons/icons-f386932621.svg [<a href="javascript:showhide('spec9-WindowsNT-chrome-61.0.3163.1000')">stack</a>]<br/><span style="display: none" id="spec9-WindowsNT-chrome-61.0.3163.1000" class="stacktrace">ScriptTimeoutError: asynchronous script timeout: result was not received in 11 seconds
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.15063 x86_64)
+    at WebDriverError (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:27:5)
+    at ScriptTimeoutError (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:227:5)
+    at Object.checkLegacyResponse (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\error.js:546:15)
+    at parseHttpResponse (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:509:13)
+    at doSend.then.response (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\http.js:441:30)
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+From: Task: Protractor.waitForAngular() - Locator: By(css selector, [id=&quot;wallet&quot;])
+    at thenableWebDriverProxy.schedule (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:807:17)
+    at ProtractorBrowser.executeAsyncScript_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\built\browser.js:425:28)
+    at angularAppRoot.then (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\built\browser.js:456:33)
+    at ManagedPromise.invokeCallback_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at process._tickCallback (internal/process/next_tick.js:109:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function) [as isDisplayed] (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function) [as isDisplayed] (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at C:\Work\Testing\protractor\Exercise 2\PageObjects\LoginPageObject.js:25:34
+    at C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:938:14
+    at TaskQueue.execute_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)
+    at C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+From: Task: &lt;anonymous&gt;
+    at pollCondition (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2195:19)
+    at C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2191:7
+    at new ManagedPromise (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2190:22
+    at TaskQueue.execute_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at process._tickCallback (internal/process/next_tick.js:109:7)
+From: Task: &lt;anonymous wait&gt;
+    at scheduleWait (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2188:20)
+    at ControlFlow.wait (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2517:12)
+    at thenableWebDriverProxy.wait (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\webdriver.js:934:29)
+    at run (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\built\browser.js:59:33)
+    at ProtractorBrowser.to.(anonymous function) [as wait] (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\built\browser.js:67:16)
+    at LoginPageObject.checkIfLoginSuccessful (C:\Work\Testing\protractor\Exercise 2\PageObjects\LoginPageObject.js:24:17)
+    at UserContext.&lt;anonymous&gt; (C:\Work\Testing\protractor\Exercise 2\signUpLogin.js:67:15)
+    at C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+From: Task: Run it(&quot;Should  display login personal wallet after successful login!&quot;) in control flow
+    at UserContext.&lt;anonymous&gt; (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.&lt;anonymous&gt; (C:\Work\Testing\protractor\Exercise 2\signUpLogin.js:65:5)
+    at addSpecsToSuite (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\juhaszj\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.&lt;anonymous&gt; (C:\Work\Testing\protractor\Exercise 2\signUpLogin.js:57:1)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)</span></li></ul></li></ul><a href="javascript:showhide('3a1efee0-c62c-11e7-a088-f923f33215eb')">Toggle Configuration</a><div class="config" id="3a1efee0-c62c-11e7-a088-f923f33215eb" style="display: none"><h4>Configuration</h4><li>Jasmine version:  2.8.0</li><li>Browser name:  chrome</li><li>Browser version:  61.0.3163.100</li><li>Platform:  Windows NT</li><li>Javascript enabled:  true</li><li>Css selectors enabled:  true</li></div><ul style="list-style-type:none"><h4>1-Check that the Kaboo signup is working properly  (20 s)</h4><li id="537d7100-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec0" data-name="Opens sign-up page successfully" data-browser="firefox"><span class="passed">&#10003;</span><a href="45728df7299904603520194020031515.png">Opens sign-up page successfully</a>(5 s)</li><li id="537d9810-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec1" data-name="Fills all fields with valid data on step 1" data-browser="firefox"><span class="passed">&#10003;</span><a href="9eed1fcaff57945e1f0f18657eda53af.png">Fills all fields with valid data on step 1</a>(1 s)</li><li id="537d9811-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec2" data-name="Clicks NEXT button" data-browser="firefox"><span class="passed">&#10003;</span><a href="34621b87c33e87443f7edf0a609398f8.png">Clicks NEXT button</a>(0.87 s)</li><li id="537d9812-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec3" data-name="Fills all fields with valid data from step 2" data-browser="firefox"><span class="passed">&#10003;</span><a href="8215391b115af87ccd695f6ae1b6d005.png">Fills all fields with valid data from step 2</a>(10 s)</li><li id="537d9813-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec4" data-name="Clicks on register button if enabled" data-browser="firefox"><span class="passed">&#10003;</span><a href="2c1d5e819a95be04f85ed0f154dabb0a.png">Clicks on register button if enabled</a>(1 s)</li><li id="537d9814-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec5" data-name="Displays confirmation on registration" data-browser="firefox"><span class="passed">&#10003;</span><a href="946a5b7c73d7bd931ea813ceb04a81b0.png">Displays confirmation on registration</a>(1 s)</li></ul><ul style="list-style-type:none"><h4>2-Check that the Kaboo login does not allows the user to log in as it's email was not confirmed! (8 s)</h4><li id="537d9815-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec6" data-name="Tries to log-in with credentials registered in previous test" data-browser="firefox"><span class="passed">&#10003;</span><a href="66a837286fb9a213eec1f8e38f8b421e.png">Tries to log-in with credentials registered in previous test</a>(7 s)</li><li id="537d9816-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec7" data-name="Should still display login section due to missing confirmation" data-browser="firefox"><span class="passed">&#10003;</span><a href="cde6d0e63e727686b214a6c04dce0996.png">Should still display login section due to missing confirmation</a>(0.781 s)</li></ul><ul style="list-style-type:none"><h4>3-Check that the Kaboo login is working properly (using credentials: autouk / Autotest1 ) (11 s)</h4><li id="537d9817-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec8" data-name="Tries to log-in with credentials registered in previous test" data-browser="firefox"><span class="passed">&#10003;</span><a href="2f63b5b6930de83638ccab9ad0ac7817.png">Tries to log-in with credentials registered in previous test</a>(7 s)</li><li id="537d9818-c62c-11e7-9887-01e9125d22a4" class="passed" data-spec="spec9" data-name="Should  display login personal wallet after successful login!" data-browser="firefox"><span class="passed">&#10003;</span><a href="e2bec0c40ba5270f58290c6707284730.png">Should  display login personal wallet after successful login!</a>(5 s)</li></ul><a href="javascript:showhide('537dbf20-c62c-11e7-9887-01e9125d22a4')">Toggle Configuration</a><div class="config" id="537dbf20-c62c-11e7-9887-01e9125d22a4" style="display: none"><h4>Configuration</h4><li>Jasmine version:  2.8.0</li><li>Browser name:  firefox</li><li>Browser version:  </li><li>Platform:  </li><li>Javascript enabled:  </li><li>Css selectors enabled:  </li></div></body></html>
