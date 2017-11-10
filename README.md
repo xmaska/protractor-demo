@@ -21,17 +21,17 @@ npm install randomstring<br>
 Please note that the implementation covers a third test case which validates whether the user is disabled until it's email gets verified.
 
 ### Scenario: 1-Check that the Kaboo signup is working properly 
- Given user is on /signup page
- When fills all fields with valid data on step 1
- And clicks NEXT
- And fills all fields with valid data from step 2
- Then register button is enable and clickable
+ Given user is on /signup page<br>
+ When fills all fields with valid data on step 1<br>
+ And clicks NEXT<br>
+ And fills all fields with valid data from step 2<br>
+ Then register button is enable and clickable<br>
  
 ### Scenario: 2-Check that the Kaboo login is working properly (user registered or use autouk / Autotest1 )
- Given user is on /login page
- When fills username/password
- And clicks Log in button
- Then user should be redirected to account page /profile
+ Given user is on /login page<br>
+ When fills username/password<br>
+ And clicks Log in button<br>
+ Then user should be redirected to account page /profile<br>
  
  
  # Writing BDD specifications for the 'Freebies Vault' feature
@@ -39,19 +39,19 @@ Please note that the implementation covers a third test case which validates whe
  ## Front-end
  
  ### Scenario: 1 - Check that YOUR HISTORY is displayed
-  Given the user gets rewarded on Kaboo
-  When Freebies Vault Section is selected in the navigation menu
-  Then YOUR HISTORY is shown on the page
+  Given the user gets rewarded on Kaboo<br>
+  When Freebies Vault Section is selected in the navigation menu<br>
+  Then YOUR HISTORY is shown on the page<br>
   
 ### Scenario: 2 - Check that the user can see the right amount of thumbnails 
-  Given the user has five tokens
-  When the user navigates to Freebies Vault section
-  Then five thumbnails are displayed in the YOUR HISTORY section
+  Given the user has five tokens<br>
+  When the user navigates to Freebies Vault section<br>
+  Then five thumbnails are displayed in the YOUR HISTORY section<br>
   
 ### Scenario: 3 - Check that the user can only see the last 8 thumbnails
-  Given the user has 9 tokens (rewards)
-  When navigates to Freebies Vault section
-  Then only the last 8 tokens are displayed with thumbnails
+  Given the user has 9 tokens (rewards)<br>
+  When navigates to Freebies Vault section<br>
+  Then only the last 8 tokens are displayed with thumbnails<br>
   
 ##List of features that are not covered by the business requirements
 
